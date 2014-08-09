@@ -44,10 +44,7 @@ module.exports.routes = {
   '/medication-dosing': {
     view: 'medication-dosing'
   },
-  '/video-chat': {
-    view: 'video-chat'
-  },
-  'GET /video-chat/:id' : 'VideoChatController.hi',
+  '/video-chat': 'VideoChatController.vchat',
 
 
   /***************************************************************************
