@@ -9,5 +9,7 @@ applications:
   command: node app.js
   env:
     NODE_ENV: production
+    TB_KEY: 44936002 
+    TB_SECRET: 1c7c8ab16a58bda7d6783df4dd630c8fb0670bbe
   services:
     -  wagginsql
