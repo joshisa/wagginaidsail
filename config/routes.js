@@ -38,6 +38,15 @@ module.exports.routes = {
   '/legal': {
     view: 'legal'
   },
+  '/symptom-checker': {
+    view: 'symptom-checker'
+  },
+  '/medication-dosing': {
+    view: 'medication-dosing'
+  },
+  '/video-chat': {
+    view: 'video-chat'
+  },
 
 
   /***************************************************************************
