@@ -10,6 +10,7 @@
   cursor: pointer;
   display: block;
   margin-bottom: 20px;
+  max-width: 100%;
   opacity: .4;
   width: 200px;
 }
