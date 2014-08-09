@@ -44,7 +44,14 @@ module.exports.routes = {
   '/medication-dosing': {
     view: 'medication-dosing'
   },
-  '/video-chat': 'VideoChatController.vchat',
+  '/what-is-wrong': {
+    view: 'what-is-wrong'
+  },
+  '/possible-causes': {
+    view: 'possible-causes'
+  },
+  '/video-chat': 'VideoChatController.vchat'
+  
 
 
   /***************************************************************************

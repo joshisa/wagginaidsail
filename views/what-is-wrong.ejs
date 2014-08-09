@@ -1,0 +1,79 @@
+<%- partial('navbar-header.ejs') %>
+
+<script>
+  jQuery(function() {
+    jQuery('#selectProblem').change(function(event) {
+      var selected = jQuery(this).val();
+      jQuery('.form-group.problem').hide();
+      jQuery('.form-group.problem-' + selected).show();
+    });
+  });
+</script>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h1>What is Wrong?</h1>
+  </div>
+  
+  <div class="col-lg-6">
+    <div class="well bs-component">
+      <form class="form-horizontal" action="/possible-causes">
+        <fieldset>
+        
+          <div class="form-group">
+            <label class="col-lg-2 control-label" for="selectProblem">Type of problem:</label>
+            <div class="col-lg-10">
+              <select id="selectProblem" class="form-control">
+                <option value="physical">Physical</option>
+                <option value="behavioral">Behavioral</option>
+                <option value="nutritional">Nutritional</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group problem problem-physical">
+            <label class="col-lg-2 control-label" for="selectPhysicalDetail">Area of concern:</label>
+            <div class="col-lg-10">
+              <select id="selectPhysicalDetail" class="form-control">
+                <option>Bleeding</option>
+                <option>Diarrhea</option>
+                <option>Limping</option>
+                <option>Lethargy</option>
+                <option>Nausea</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group problem problem-behavioral" style="display:none">
+            <label class="col-lg-2 control-label" for="selectBehavioralDetail">Area of concern:</label>
+            <div class="col-lg-10">
+              <select id="selectBehavioralDetail" class="form-control">
+                <option>Agressiveness</option>
+                <option>Anxiety</option>
+                <option>Lethargy</option>
+                <option>Timidness</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group problem problem-nutritional" style="display:none">
+            <label class="col-lg-2 control-label" for="selectNutritionalDetail">Area of concern:</label>
+            <div class="col-lg-10">
+              <select id="selectNutritionalDetail" class="form-control">
+                <option>Anemia</option>
+                <option>Overeating</option>
+              </select>
+            </div>
+          </div>
+          
+          <button class="btn btn-success" type="submit">Sumbit</button>
+          
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- partial('footer.ejs') %>
+<%- partial('bootstrap.ejs') %>
