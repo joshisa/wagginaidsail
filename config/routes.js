@@ -47,6 +47,7 @@ module.exports.routes = {
   '/video-chat': {
     view: 'video-chat'
   },
+  'GET /video-chat/:id' : 'VideoChatController.hi',
 
 
   /***************************************************************************
