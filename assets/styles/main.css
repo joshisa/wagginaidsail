@@ -1,0 +1,8 @@
+.navbar-header img.logo {
+  float: left;
+  height: 50px;
+  padding-right: 20px;
+}
+.col-lg-4 .jumbotron .panel-heading {
+  height: 80px;
+}
