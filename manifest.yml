@@ -1,0 +1,13 @@
+---
+applications:
+- name: wagginaidnode
+  memory: 256M
+  instances: 1
+  host: wagginaidnode
+  domain: mybluemix.net
+  path: .
+  command: node app.js
+  env:
+    NODE_ENV: production
+  services:
+    -  wagginsql
