@@ -6,3 +6,10 @@
 .col-lg-4 .jumbotron .panel-heading {
   height: 80px;
 }
+.animal-type img {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+  opacity: .4;
+  width: 200px;
+}
