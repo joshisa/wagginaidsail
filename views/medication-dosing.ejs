@@ -1,13 +1,78 @@
 <%- partial('navbar-header.ejs') %>
 
+<script>
+  jQuery(function() {
+    jQuery('#submit').click(function(event) {
+      event.preventDefault();
+      jQuery('#recommended').show();
+    });
+  });
+</script>
+
 <!-- Begin page content -->
 <div class="container">
   <div class="page-header">
     <h1>Medication Dosing</h1>
   </div>
+
+  <form class="form-horizontal col-sm-6" role="form">
+    <div class="form-group">
+      <label for="medication" class="col-sm-3 control-label">Medication</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="medication" placeholder="Ex. Asprin">
+      </div> <!-- .col-sm-9 -->
+    </div>
+
+
+    <div class="form-group">
+      <label class="col-sm-3 control-label" for="inlineRadio1">My Pet is</label>
+      <div class="col-sm-9">
+        <div class="btn-group.btn-group-justified" data-toggle="buttons">
+          <label class="btn btn-primary">
+              <input type="radio" name="type" value="dog">DOG</input>
+          </label>
+          <label class="btn btn-primary">
+              <input type="radio" name="type" value="cat">CAT</input>
+          </label>
+          <label class="btn btn-primary">
+              <input type="radio" name="type" value="cat">UNICORN</input>
+          </label>
+        </div>
+      </div> <!-- .col-sm-9 -->
+    </div>
+
+    <div class="form-group">
+      <label for="weight" class="col-sm-3 control-label">Weight</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" id="weight" placeholder="Ex. 10 lbs">
+      </div> <!-- .col-sm-10 -->
+    </div>
+    
+    <div class="col-sm-9 col">
+      <button id="submit" type="submit" class="btn btn-default btn-block col-md-offset-4">Get Dosing</button>
+    </div>
+    
+  </form>
+
+  <br style="clear:both">&nbsp;</br>
   
-  <p>We're still working on this part...</p>
+  <hr />
+  
+  <div class="panel panel-danger" id="recommended" style="display:none">
+    <div class="panel-heading">
+      <h3 class="panel-title">Something went wrong...</h3>
+    </div>
+    <div class="panel-body">
+      We don't have any information on that medication yet...
+    </div>
+  </div>
+              
+</div> <!-- .container -->
+
+<div id="target" class="output">
 </div>
 
 <%- partial('footer.ejs') %>
 <%- partial('bootstrap.ejs') %>
+
+</div>
