@@ -14,3 +14,9 @@
   opacity: .4;
   width: 200px;
 }
+.OT_publisher {
+  float: left;
+  margin-right: 20px !important;
+  min-height: 240px !important;
+  min-width: 320px !important;
+}
