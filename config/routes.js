@@ -50,6 +50,12 @@ module.exports.routes = {
   '/possible-causes': {
     view: 'possible-causes'
   },
+  '/dosing-instructions': {
+    view: 'dosing-instructions'
+  },
+  '/enter-profile': {
+    view: 'enter-profile'
+  },
   '/video-chat': 'VideoChatController.vchat',
   '/map': {
     view: 'map' 

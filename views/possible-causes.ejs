@@ -1,11 +1,47 @@
 <%- partial('navbar-header.ejs') %>
 
+<%- partial('video-dialog.ejs') %>
+
+<script>
+  jQuery(function() {
+    jQuery('#video-chat-button').click(function(event) {
+      event.preventDefault();
+      var url = jQuery(this).attr('href');
+      openVideoDialog('#video-dialog', url);
+    });
+  });
+</script>
+
+
 <!-- Begin page content -->
 <div class="container">
   <div class="page-header">
     <h1>Possible Causes</h1>
   </div>
   
+  <h2>Allergic Conjunctivitis</h2>
+  <p>Allergic conjunctivitis begins by contact with airborne allergens. This leads to excessive redness and thickening of the inner eyelids, redness of the whites of the eyes, and sometimes excessive tearing. This resultant inflamed state leaves the eye predisposed to infection.Left untreated, allergic conjunctivitis can lead to irritation that bothers the animal to the point that it begins to paw at the eye or rub it on ananimate objects, predisposing to corneal scratches or ulcers. This is a treatable disease but is not curable. Symptomatic treatment typically consists of a corticosteroid based ophthalmic drop or ointment formulation. Allergic conjunctivitis may wax or wane depending on the allergen(s) and its prevalence during the seasons.</p>
+  <p>The following allergy medications may also help with allergic conjuctivitis:
+<ul>
+<li>Benedryl (diphenhydramine): dosage 1mg/lb given 2 or 3 times per day.  Benedryl is available in many forms and it is VERY important to check the dose for your dog versus the amount of medicine in the tablet, capsule, or liquid you have.  Do NOT give Benedryl if the product has any other 'active' ingredients.</li>
+<li>Claritin (loratadine): For the 10mg tablets -- dosage is 1/2 to 1 tablet once a day or 1/4 to 1/2 tablet twice a day.  </li>
+<li>Zyrtec (cetirizine): For the 10mg tablets -- dosage is 1/2 to 1 tablet once a day or 1/4 to 1/2 tablet twice a day. </lil>
+</ul> 
+  <h2>Eye Infection (bacterial or viral)</h2>
+  <p>Some eye infections may heal on their own, but others require veterinary treatment and an antibiotic.  If your dog seems to be in pain, the discharge from the eye is more than basic allergies, or the eye is really red, you should see a veterinarian.
+
+  <p><a id="video-chat-button" class="btn btn-danger btn-lg" href="/video-chat" id="video-chat-button">Talk to a live vet now!</a></p>
+
+  <!--
+  <h2>Motion Sickness</h2>
+  <p>Motion sickness can be common problem in pets.  Medication can be administered about 1 hour before the trip to help prevent motion sickness.</p>
+  <p>Medications:
+<ul>
+<li>Dimenhydrinate: this is the 'active' ingredient in the original Dramamine.  Always check the packaging for the name and amount of an ingredient before dosing your pet.  Dosage for dogs is 25 to 50mg given one to three times per day.  Dosage for cats is 12.5mg one to three times per day.  This medicine may make your pet drowsy, but some animals have the opposite reaction and become more engergetic.</li>  
+<li>Meclizine: this is the 'active' ingredient in Bonine and Non-Drowsy Dramamine.  Dosage for dogs is 25mg once a day.  Dosage for cats is 12.5mg once a day.</li>
+</ul>
+-->
+
 </div>
 
 <%- partial('footer.ejs') %>
