@@ -12,7 +12,8 @@
 // prompted by your browser. If you see a blank space instead of the map, this
 // is probably because you have denied permission for location sharing.
 
-var map, pos, service, infowindow;
+var map, pos, service, detailLocation, infowindow, isOpenString, isOpenBool;
+var isOpenUnknown = false;
 
 function initialize() {
   var mapOptions = {
@@ -38,7 +39,7 @@ function initialize() {
       var request = {
         location: pos,
         radius: 7500,
-        types: ['veterinary_care','pet_store','zoo']
+        types: ['veterinary_care','pet_store', 'zoo']
       };
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, callback);
@@ -71,8 +72,48 @@ function createMarker(place) {
   var request = { reference: place.reference };
     service.getDetails(request, function(details, status) {
       google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(details.name + '<br/>' + details.formatted_phone_number + '<br/>' + details.formatted_address);
+
+        if (details) {
+          if (details.hasOwnProperty('opening_hours')) {
+            isOpenBool = details.opening_hours.open_now; 
+          } else {
+            isOpenBool = false; 
+          }
+          
+          if (isOpenBool) {
+            isOpenString = '<span style="color:green;font-weight:bold;">Yes</span>'; 
+          } else {
+            isOpenString = '<span style="color:red;font-weight:bold;">No</span>';  
+          }
+
+          detailLocation =  details.formatted_phone_number + '<br/>' + details.formatted_address + '<br/> Open Now? ' + isOpenString; 
+
+        } else {
+
+          if (place.hasOwnProperty('opening_hours')) {
+            isOpenBool = place.opening_hours.open_now;
+          } else {
+            isOpenBool = false;
+            isOpenUnknown = true;
+          }
+          
+          if (isOpenBool) {
+            isOpenString = '<span style="color:green;font-weight:bold;">Yes</span>'; 
+          } else {
+            if (isOpenUnknown) {
+              isOpenString = '<span style="color:blue;font-weight:bold;">???</span>'; 
+            } else {
+              isOpenString = '<span style="color:red;font-weight:bold;">No</span>'; 
+            }
+          }
+          detailLocation = place.vicinity + '<br/> Open Now? ' + isOpenString;  
+        }
+
+        infowindow.setContent(place.name + '<br/>' + detailLocation);
         infowindow.open(map, this);
+
+        isOpenUnknown = false;
+
       });
     });
 }
