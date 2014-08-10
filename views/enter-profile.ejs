@@ -3,12 +3,438 @@
 <!-- Begin page content -->
 <div class="container">
   <div class="page-header">
-    <h1>Enter Profile</h1>
-  </div>
-  
-  <p>We're still working on this.</p>
-  
+        <h1>Pet Profile&nbsp;<small>Save your pets information</small></h1>
+    </div>
+
+
+
+
 </div>
+
+<div class="container">
+
+ <div class="col-md-6">
+
+        <form role="form">
+            <div class="form-group  col-md-6">
+                <label class="control-label" for="onwerName">Name:</label>
+                <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Your name">
+            </div>
+
+            <div class="form-group  col-md-6">
+                <label class="control-label" for="onwerName">Name:</label>
+                <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Your name">
+            </div>
+
+            <div class="form-group  col-md-6">
+                <label class="control-label" for="onwerName">Name:</label>
+                <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Your name">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="control-label" for="exampleInputFile">Upload a photo of pet</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Please keep your profile photo current.</p>
+            </div>
+
+            <div class="form-group">
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Type <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Dog</a>
+                        </li>
+                        <li><a href="#">Cat</a>
+                        </li>
+                        <a href="#">
+                        </a>
+                        <li>
+                            <a href="#"></a><a href="#">Something else...</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Breed</label>
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input name="breedType" id="pureBreed" value="option1" checked="" type="radio">Pure Breed
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="breedType" id="mixedBreed" value="option2" type="radio">Mixed Bread
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Dog</a>
+                    </li>
+                    <li><a href="#">Cat</a>
+                    </li>
+                    <a href="#">
+                    </a>
+                    <li>
+                        <a href="#"></a><a href="#">Something else...</a>
+                    </li>
+                </ul>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="form-group  col-md-6">
+        <label class="control-label" for="onwerName">Color:</label>
+        <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Ex: Black, Calicol">
+    </div>
+
+    <div class="form-group  col-md-6">
+        <label class="control-label" for="onwerName">Markings:</label>
+        <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Ex. White paws">
+    </div>
+
+    <div class="form-group  col-md-6">
+        <label class="control-label" for="onwerName">Leghth:</label>
+        <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Ex. 22 inches">
+    </div>
+
+    <div class="form-group  col-md-6">
+        <label class="control-label" for="onwerName">Weight:</label>
+        <input type="email" class="form-control col-md-6" id="onwerName" placeholder="Ex. 30 lbs">
+    </div>
+
+
+    <button type="submit" class="btn">Submit</button>
+
+
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li><a href="#diet" role="tab" data-toggle="tab">Diet</a>
+            </li>
+            <li><a href="#exercies" role="tab" data-toggle="tab">Exercise</a>
+            </li>
+            <li><a href="#vaccinations" role="tab" data-toggle="tab">Vaccinations</a>
+            </li>
+            <li><a href="#allergies" role="tab" data-toggle="tab">Allergies</a>
+            </li>
+            <li><a href="#microchip" role="tab" data-toggle="tab">Microchip</a>
+            </li>
+            <li><a href="#sitter" role="tab" data-toggle="tab">Dog Sitter</a>
+            </li>
+            <li><a href="#conditions" role="tab" data-toggle="tab">Condtions</a>
+            </li>
+            <li class="active"><a href="#incidents" role="tab" data-toggle="tab">Incidents</a>
+            </li>
+            <li><a href="#medication" role="tab" data-toggle="tab">Medications</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane" id="diet">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Food Description</th>
+                            <th>Brand/ Manufacturer</th>
+                            <th>Start Date (End Date if applicable)</th>
+                            <th>Quantity</th>
+                            <th>Frequency</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="exercies">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Activity Type</th>
+                            <th>Frequency</th>
+                            <th>Duration</th>
+                            <th>Level of Activity</th>
+                            <th>Frequency</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        Action <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Low</a>
+                                        </li>
+                                        <li><a href="#">Moderate</a>
+                                        </li>
+                                        <li><a href="#">High</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="vaccinations">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Vaccination Type</th>
+                            <th>Date of Vaccination</th>
+                            <th>Performed by</th>
+                            <th>Additional Information</th>
+                            <th>File Upload</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="file" id="exampleInputFile">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="allergies">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Allergy Description</th>
+                            <th>Adverse Reaction Symptoms</th>
+                            <th>Treatment</th>
+                            <th>Additional Information</th>
+                            <th>File Upload</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="file" id="exampleInputFile">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="microchip">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Microchip Company</th>
+                            <th>Microchip Number</th>
+                            <th>Performed by</th>
+                            <th>Additional Information</th>
+                            <th>File Upload</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="file" id="exampleInputFile">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="tab-pane" id="sitter">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Relationship/Title</th>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="tab-pane" id="conditions">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Name of Condition</th>
+                            <th>Description</th>
+                            <th>Recurring</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="tab-pane active" id="incidents">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Incident</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Additional Information</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="medication">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Purpose</th>
+                            <th>Frequency</th>
+                            <th>Dosage</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Additional Information</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
 
 <%- partial('footer.ejs') %>
 <%- partial('bootstrap.ejs') %>
+
+</div>
