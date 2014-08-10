@@ -120,7 +120,7 @@ function createMarker(place) {
 
 function handleNoGeolocation(errorFlag) {
   if (errorFlag) {
-    var content = 'Error: The Geolocation service failed.';
+    var content = 'Error: The Geolocation service failed. Please make sure <b>Location services</b> are enabled and that your browser is enabled to use them.';
   } else {
     var content = 'Error: Your browser doesn\'t support geolocation.';
   }
