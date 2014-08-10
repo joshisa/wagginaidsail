@@ -1,0 +1,42 @@
+<div style="display:none">
+  <div id="video-dialog" title="Start Video Chat">
+    <div>Tell me about your pet's problem:</div>
+    <textarea rows="3"></textarea>
+    <h4>There is a $25.00 charge for a 10 minute video chat.</h4>
+    <table>
+      <tr>
+        <td>Credit card number:</td>
+        <td><input type="text"></input></td>
+      </tr>
+      <tr>
+        <td>Expiration:</td>
+        <td><input type="text" style="width:40px;margin-right:6px" value="MM"></input><input type="text" style="width:100px" value="YYYY"></input></td>
+      </tr>
+      <tr>
+        <td>CCV:</td>
+        <td><input type="text" style="width:40px"></input></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="checkbox"></input>I agree the the site terms of service.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script>
+function openVideoDialog(selector, url) {
+  jQuery(selector).dialog({
+    height:'auto',
+    width:'500px',
+    buttons: [
+      {
+        text: 'Start Now',
+        click: function() {
+          jQuery(this).dialog('close');
+          window.location.href = url;
+        }
+      },
+    ]
+  });
+}
+</script>

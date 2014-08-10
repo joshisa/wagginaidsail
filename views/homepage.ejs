@@ -1,5 +1,17 @@
 <%- partial('navbar-header.ejs') %>
 
+<%- partial('video-dialog.ejs') %>
+
+<script>
+  jQuery(function() {
+    jQuery('#video-chat-button').click(function(event) {
+      event.preventDefault();
+      var url = jQuery(this).attr('href');
+      openVideoDialog('#video-dialog', url);
+    });
+  });
+</script>
+
 <!-- Begin page content -->
 <div class="container">
   <div class="page-header">
@@ -24,7 +36,7 @@
     <div class="col-lg-4">
       <div class="jumbotron">
         <p class="panel-heading">I need to talk to a vet NOW!</p>
-        <a href="/video-chat" class="btn btn-primary btn-lg">Start Video Chat</a>
+        <a id="video-chat-button" href="/video-chat" class="btn btn-primary btn-lg">Start Video Chat</a>
       </div>
     </div>
   </div>

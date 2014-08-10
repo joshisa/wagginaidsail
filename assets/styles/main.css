@@ -6,6 +6,17 @@
 .col-lg-4 .jumbotron .panel-heading {
   height: 80px;
 }
+.ui-dialog table,
+.ui-dialog input[type="text"],
+.ui-dialog textarea {
+  width: 100%;
+}
+.ui-dialog input {
+  margin: 2px 0;
+}
+.ui-dialog input[type="checkbox"] {
+  margin-right: 6px;
+}
 .animal-type img {
   cursor: pointer;
   display: block;
