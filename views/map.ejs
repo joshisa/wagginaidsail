@@ -1,0 +1,106 @@
+<%- partial('navbar-header.ejs') %>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h1>Locate Animal Treatment Near You</h1>
+  </div>
+  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script>
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see a blank space instead of the map, this
+// is probably because you have denied permission for location sharing.
+
+var map, pos, service, infowindow;
+
+function initialize() {
+  var mapOptions = {
+    zoom: 13
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos,
+        content: 'Welcome to <b>Waggin&apos; Aid</b><br/>You are HERE'
+      });
+
+      map.setCenter(pos);
+      var request = {
+        location: pos,
+        radius: 7500,
+        types: ['veterinary_care','pet_store','zoo']
+      };
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, callback);
+      
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }
+
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location
+  });
+
+  var request = { reference: place.reference };
+    service.getDetails(request, function(details, status) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(details.name + '<br/>' + details.formatted_phone_number + '<br/>' + details.formatted_address);
+        infowindow.open(map, this);
+      });
+    });
+}
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
+
+  var options = {
+    map: map,
+    position: new google.maps.LatLng(60, 105),
+    content: content
+  };
+
+  infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);
+}
+
+   google.maps.event.addDomListener(window, 'load', initialize);
+ </script> 
+
+  <div id="map-canvas" style=""></div>
+
+  <p>We're still working on this part...</p>
+</div>
+
+<%- partial('footer.ejs') %>
+<%- partial('bootstrap.ejs') %>

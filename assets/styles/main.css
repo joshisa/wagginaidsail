@@ -31,3 +31,9 @@
   min-height: 240px !important;
   min-width: 320px !important;
 }
+#map-canvas {
+  height: 600px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px
+}
