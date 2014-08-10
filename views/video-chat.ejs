@@ -6,7 +6,6 @@
     <h1>Video Chat</h1>
   </div>
   <script src='//static.opentok.com/webrtc/v2.2/js/opentok.min.js'></script>
-  <h4>To go to your own room, simply type: http://wagginaidnode.mybluemix.net/video-chat/yourRoomName</h4>
   <div id="videos">
     <div id="myPublisherDiv"></div>
   </div>
@@ -24,7 +23,7 @@
     var session = OT.initSession(apiKey, sessionId); 
     session.on({ 
         streamCreated: function(event) { 
-          session.subscribe(event.stream, "videos", {insertMode: 'append'}); 
+          session.subscribe(event.stream, "videos", {insertMode: 'append', width: 320, height: 240}); 
         } 
     }); 
     session.connect(token, function(error) {
@@ -36,7 +35,6 @@
       }
     });
   </script>
-  <p>We're still working on this part...</p>
 </div>
 
 <%- partial('footer.ejs') %>
